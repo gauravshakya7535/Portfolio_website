@@ -158,6 +158,32 @@
       height: fit-content;
     }
 
+    .audio-container {
+      display: inline;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .play-btn {
+      font-size: 1em;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(135deg, #18356b, #3670d3);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .play-btn:hover {
+        transform: scale(1.1);
+    }
+
   </style>
 </head>
 <body>
@@ -177,7 +203,14 @@
   </nav>
 
   <section id="summary">
-    <h2>Summary</h2>
+    <h2>Summary
+      <div class="audio-container">
+        <audio id="myAudio" src="ExpAudiomp3.mp3"></audio>
+        <button class="play-btn" onclick="toggleAudio()">
+            ▶ 
+        </button>
+      </div>
+    </h2>
     <p>
       <strong>Senior Claims Executive</strong> with <span class="summary_exp">3+ years of experience in claims adjudication, internal audit, and compliance</span>, now transitioning into data analysis. Proficient in SQL, Power BI, Excel and VBA Automation to extract insights, build dashboards, and streamline reporting processed. Demonstrated success in reducing discrepancies, automating manual workflows, and improving decision-making through data-driven reporting. Seeking to leverage analytical and technical skills in a Data Analyst role to deliver actionable business insights and process optimization.    </p>
   </section>
@@ -365,3 +398,19 @@
 
 </body>
 </html>
+
+<!-- Function to play the audio when click the button -->
+<script>
+function toggleAudio() {
+    const audio = document.getElementById("myAudio");
+    const btn = document.querySelector(".play-btn");
+
+    if (audio.paused) {
+        audio.play();
+        btn.innerHTML = "⏸";
+    } else {
+        audio.pause();
+        btn.innerHTML = "▶";
+    }
+}
+</script>
