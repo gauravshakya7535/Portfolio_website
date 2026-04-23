@@ -5,7 +5,7 @@ This is my personal portfolio website showcasing my skills, projects, and experi
 ---
 
 ## 🚀 Live Demo
-👉 [View Portfolio](https://gauravshakya7535.github.io/Portfolio_website/))  
+👉 [View Portfolio](https://gauravshakya7535.github.io/Portfolio_website/) 
 
 
 ---
